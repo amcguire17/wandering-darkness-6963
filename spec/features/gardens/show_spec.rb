@@ -19,7 +19,6 @@ RSpec.describe 'Garden Show Page' do
     visit "/gardens/#{@garden.id}"
   end
   it 'lists all plants in garden plots that take less than 100 days to harvest' do
-    save_and_open_page
     expect(page).to have_content(@plant_1.name)
     expect(page).to have_content(@plant_3.name)
     expect(page).to have_content(@plant_4.name)
