@@ -26,7 +26,10 @@ RSpec.describe Garden do
         plot_3.plants << plant_5
         plot_3.plants << plant_6
 
-        expect(garden_1.plants_harvest_below_100).to eq([plant_1, plant_3, plant_4])
+        expect(garden_1.plants_harvest_below_100.length).to eq(3)
+        expect(garden_1.plants_harvest_below_100.first.name).to eq(plant_1.name)
+        expect(garden_1.plants_harvest_below_100.second.name).to eq(plant_3.name)
+        expect(garden_1.plants_harvest_below_100.third.name).to eq(plant_4.name)
       end
     end
   end
